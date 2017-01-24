@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WHTC | Westcliff Hardcourt Tennis Club</title>
     <meta charset="UTF-8">
     <!-- load Bootstrap -->
@@ -10,28 +13,35 @@
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-messages.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
+
   </head>
   <!-- navbar -->
   <body>
+<!-- Load jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
     <header>
       <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container container-fluid">
+        <div class="container-fluid">
           <div class ="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">WHTC</a>
+            <a class="navbar-brand" href="#">Westcliff Hardcourt Tennis Club</a>
           </div>
-          <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
-            <li><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Coaching</a></li>
-            <li><a href="#">What's on</a></li>
-            <li><a href="#">Join</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right" >
+              <li class="active"><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Coaching</a></li>
+              <li><a href="#">What's on</a></li>
+              <li><a href="#">Join</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
@@ -55,8 +65,8 @@
 
       <div class='row'>
         <div class='col-md-6'>
-          <video controls='controls'>
-          <source src='pictures/timhenman.mp4'/>
+          <center><video controls='controls'>
+          <source src='pictures/timhenman.mp4'/></center>
           </video>
 		    </div>
 
@@ -72,11 +82,40 @@
 
       <hr/>
 
+      <div class="row">
+        <div class="col-md-12">
+          <center><h1>Sign up to our mailing list</h1>
+          <button type="button" class="btn btn-warning btn-lg">Sign up</button></center>
+        </div>
+      </div>
+
+      <hr/>
+
+      <div class='row'>
+        <div class='col-md-6 row-eq-height vcenter'>
+          <center><video controls='controls'>
+          <source src='pictures/video2.mp4'/>
+          </video></center>
+		    </div>
+
+        <div class='col-md-6 row-eq-height vcenter'>
+          <center><h1>Things we offer</h1>
+          <ul class="list-group">
+            <li class="list-group-item">Mini tennis</li>
+            <li class="list-group-item">Mid week tennis</li>
+            <li class="list-group-item">Absolute beginners program</li>
+            <li class="list-group-item">Private lessons</li>
+            <li class="list-group-item">Group lesons</li>
+            <li class="list-group-item">Performance squads</li>
+          </ul></center>
+        </div>
+      </div>
+
     </div>
 
     <!-- footer -->
 
-    <footer class="footer navbar navbar-fixed-bottom">
+    <footer class="footer navbar navbar-bottom">
       <div class="container">
         <div class="col-md-4">
           <center><p>Copyright westcliffhard.com 2017</p></center>

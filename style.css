@@ -1,3 +1,8 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
 img {
     height: auto;
     max-width: auto;
@@ -21,5 +26,18 @@ video {
   height: auto;
   width: 100%;
   padding-top: 10px;
-  color: #0B161E;
+  margin: 0px;
+}
+
+.vcenter {
+  padding: 20px;
+    vertical-align: middle;
+}
+
+.list-group-item {
+  border-bottom: #1B2631 solid 2px;
+}
+
+.nav {
+  font-size: 1.5em;
 }
