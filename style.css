@@ -27,17 +27,20 @@ video {
   width: 100%;
   padding-top: 10px;
   margin: 0px;
-}
-
-.vcenter {
-  padding: 20px;
-    vertical-align: middle;
+  margin-top: 30px;
 }
 
 .list-group-item {
   border-bottom: #1B2631 solid 2px;
+  width: 80%;
+  padding: 5px;
 }
 
 .nav {
   font-size: 1.5em;
+}
+
+footer img {
+  max-height: 50px;
+  margin: 10px;
 }
