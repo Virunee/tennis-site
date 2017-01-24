@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WHTC | Westcliff Hardcourt Tennis Club</title>
+    <meta charset="UTF-8">
+    <!-- load Bootstrap -->
+      <link rel="stylesheet" href="https://bootswatch.com/superhero/bootstrap.min.css" />
+      <link rel='stylesheet' href='style.css'/>
+      <!-- load angular -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-messages.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container container-fluid">
+          <div class ="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">WHTC</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
+            <li><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Coaching</a></li>
+            <li><a href="#">What's on</a></li>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+<img src='pictures/1.jpg' id="home-picture"/>
+
+<div class='jumbotron'>
+  <div class="container">
+    <h1>Welcome to WHTC!</h1>
+    <p>Established in 1929, Westcliff Hardcourt Tennis Club is the foremost club in the area.
+      We offer tennis for people of all ages and standards. Browse around our website,
+      click on our videos, and feel free to contact us with any questions.</p>
+    <button type='button' class='btn btn-info btn-lg'>
+      More info
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </button>
+  </div>
+</div>
+
+    <div class="container">
+
+      <div class='row'>
+        <div class='col-md-6'>
+          <video controls='controls'>
+          <source src='pictures/timhenman.mp4'/>
+          </video>
+		    </div>
+
+        <div class='col-md-6'>
+          <h1>New members welcome!</h1>
+          <p>We are always looking for new members and invite you to try out our club.
+             It doesn’t matter whether you are an absolute beginner or whether
+             you are an accomplished player already, everyone is welcome. </p>
+          <p> We offer tennis for players of all levels. Send us a message on our
+            Contact page if you have an enquiry. We promise to reply promptly!</p>
+        </div>
+      </div>
+
+      <hr/>
+
+    </div>
+
+  </body>
+</html>
