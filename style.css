@@ -44,3 +44,7 @@ footer img {
   max-height: 50px;
   margin: 10px;
 }
+
+nav .navbar {
+  margin-bottom: 40px;
+}
