@@ -79,3 +79,8 @@ nav .navbar {
   background-color: #333;
   border: 0px;
 }
+
+.card-img-top{
+  width:100%;
+  height:auto;
+}
