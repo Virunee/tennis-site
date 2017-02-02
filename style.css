@@ -48,3 +48,8 @@ footer img {
 nav .navbar {
   margin-bottom: 40px;
 }
+
+@media (max-width:770px){
+       .navbar-brand{
+         font-size: 1em;
+   }

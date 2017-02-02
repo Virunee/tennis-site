@@ -4,7 +4,7 @@ myApp.config(function ($routeProvider) {
 
   $routeProvider
 
-    .when('/!', {
+    .when('/', {
         templateUrl: 'pages/main.html',
         controller: 'mainController'
     })
