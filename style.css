@@ -71,4 +71,11 @@ nav .navbar {
        }
    }
 
-   
+   #prices-button {
+     margin-bottom: 10px;
+   }
+
+.card-inverse {
+  background-color: #333;
+  border: 0px;
+}

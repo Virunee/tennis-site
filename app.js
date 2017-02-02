@@ -13,6 +13,11 @@ myApp.config(function ($routeProvider) {
         templateUrl: 'pages/aboutus.html',
         controller: 'mainController'
     })
+
+    .when('/coaching', {
+        templateUrl: 'pages/coaching.html',
+        controller: 'mainController'
+    })
 });
 
 
