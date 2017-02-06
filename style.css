@@ -71,8 +71,8 @@ nav .navbar {
        }
    }
 
-   #prices-button {
-     margin-bottom: 10px;
+   .well {
+     margin-top: 10px;
    }
 
 .card-inverse {
@@ -83,4 +83,20 @@ nav .navbar {
 .card-img-top{
   width:100%;
   height:auto;
+}
+
+.panel-heading:hover {
+  background-color: #A04000;
+}
+
+.panel-heading :after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: white;         /* adjust as needed */
+}
+.panel-heading .collapsed:after {
+    /* symbol for "collapsed" panels */
+    content:"\e114";    /* adjust as needed, taken from bootstrap.css */
 }
