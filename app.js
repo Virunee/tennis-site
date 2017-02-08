@@ -28,6 +28,11 @@ myApp.config(function ($routeProvider) {
         templateUrl: 'pages/contact.html',
         controller: 'contactController'
     })
+
+    .when('/join', {
+        templateUrl: 'pages/join.html',
+        controller: 'joinController'
+    })
 });
 
 //CONTROLLERS
@@ -49,5 +54,9 @@ myApp.controller('whatsonController', ['$scope', function($scope) {
 }]);
 
 myApp.controller('contactController', ['$scope', function($scope) {
+
+}]);
+
+myApp.controller('joinController', ['$scope', function($scope) {
 
 }]);
