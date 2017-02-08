@@ -34,6 +34,15 @@ myApp.config(function ($routeProvider) {
         controller: 'joinController'
     })
 });
+// SERVICES
+
+myApp.service('priceFinder', function() {
+
+  this.lessonType = "Choose...";
+
+  this.duration = "Choose...";
+
+});
 
 //CONTROLLERS
 
@@ -45,7 +54,18 @@ myApp.controller('aboutUsController', ['$scope', function($scope) {
 
 }]);
 
-myApp.controller('coachingController', ['$scope', function($scope) {
+myApp.controller('coachingController', ['$scope','priceFinder', function($scope, priceFinder) {
+
+  $scope.lessonType = priceFinder.lessonType;
+  $scope.$watch('lessonType', function () {
+      priceFinder.lessonType = $scope.lessonType;
+    })
+
+    $scope.duration = priceFinder.duration;
+    $scope.$watch('duration', function () {
+        priceFinder.duration = $scope.duration;
+      })
+
 
 }]);
 
