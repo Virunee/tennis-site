@@ -11,16 +11,43 @@ myApp.config(function ($routeProvider) {
 
     .when('/aboutus', {
         templateUrl: 'pages/aboutus.html',
-        controller: 'mainController'
+        controller: 'aboutUsController'
     })
 
     .when('/coaching', {
         templateUrl: 'pages/coaching.html',
-        controller: 'mainController'
+        controller: 'coachingController'
+    })
+
+    .when('/whatson', {
+        templateUrl: 'pages/whatson.html',
+        controller: 'whatsonController'
+    })
+
+    .when('/contact', {
+        templateUrl: 'pages/contact.html',
+        controller: 'contactController'
     })
 });
 
+//CONTROLLERS
 
-myApp.controller('mainController', ['$scope', '$filter', '$location', function($scope, $filter, $location) {
+myApp.controller('mainController', ['$scope', function($scope) {
+
+}]);
+
+myApp.controller('aboutUsController', ['$scope', function($scope) {
+
+}]);
+
+myApp.controller('coachingController', ['$scope', function($scope) {
+
+}]);
+
+myApp.controller('whatsonController', ['$scope', function($scope) {
+
+}]);
+
+myApp.controller('contactController', ['$scope', function($scope) {
 
 }]);
