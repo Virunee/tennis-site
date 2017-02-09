@@ -1,4 +1,60 @@
 <div class="container header-margin">
   <h1>Contact</h1>
   <hr/>
+
+  <div class="row">
+    <div class="col-md-6">
+      <iframe id="map"
+      frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDYYEimjXL5tu8NkiNmFW2VMlRs_8yi-2A&q=Westcliff+Hard,Westcliff+UK"
+      allowfullscreen>
+      </iframe>
+    </div>
+    <div class="col-md-6">
+      <h3>Westcliff Hard Tennis Club</h3>
+      <p>8 The Ridgeway,<br/>
+      Westcliff-on-Sea,<br/>
+      Essex, SS0 8NT</p>
+      <hr/>
+      <p><span class="glyphicon glyphicon-earphone"></span> (01702) 478385</p>
+      <hr/>
+      <p><span class="glyphicon glyphicon-search"></span> Nearest station: Chalkwell</p>
+      <hr/>
+    </div>
+  </div>
+
+  <hr/>
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="well">
+        <p>Feel free to contact us and ask any questions you have using the form below.
+        We will try to reply within 24 hours.</p>
+
+
+        <form ng-submit="addMessage(messages)">
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="glyphicon glyphicon-user"></i>
+              </span>
+            <input type="text" class="form-control" id="name" placeholder="Name" ng-model="messages.name">
+          </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="glyphicon glyphicon-envelope"></i>
+              </span>
+            <textarea class="form-control" rows="5" id="message" placeholder="Write your message here" ng-model="messages.message"></textarea>
+          </div>
+          </div>
+          <button type="submit" class="btn btn-primary" id="submit" value="Submit">Submit</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+
 </div>

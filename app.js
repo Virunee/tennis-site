@@ -44,6 +44,7 @@ myApp.service('priceFinder', function() {
 
 });
 
+
 //CONTROLLERS
 
 myApp.controller('mainController', ['$scope', function($scope) {
@@ -74,6 +75,20 @@ myApp.controller('whatsonController', ['$scope', function($scope) {
 }]);
 
 myApp.controller('contactController', ['$scope', function($scope) {
+
+  $scope.messages = {
+    name:"",
+    message:""
+  };
+
+  $scope.messagesArray = [];
+
+  $scope.addMessage = function(messages){
+        console.log(messages);
+       $scope.messagesArray.push(messages);
+       console.log($scope.messagesArray);
+       $scope.messages = {}; // empties form after submit
+    };
 
 }]);
 

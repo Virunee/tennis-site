@@ -100,3 +100,8 @@ nav .navbar {
     /* symbol for "collapsed" panels */
     content:"\e114";    /* adjust as needed, taken from bootstrap.css */
 }
+
+#map {
+  width: 100%;
+  height: 500px;
+}
