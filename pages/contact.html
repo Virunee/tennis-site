@@ -20,41 +20,62 @@
       <hr/>
       <p><span class="glyphicon glyphicon-search"></span> Nearest station: Chalkwell</p>
       <hr/>
+
+
+        <div class="well">
+          <p>Feel free to contact us and ask any questions you have using the form below.
+          We will try to reply within 24 hours.</p>
+
+<!--- SUBMIT MESSAGE FORM --->
+
+          <form ng-submit="addMessage(messages)" name='messageForm'>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="glyphicon glyphicon-user"></i>
+                </span>
+              <input type="text" class="form-control" name="name" id="name" placeholder="Name" ng-model="messages.name">
+            </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="glyphicon glyphicon-globe"></i>
+                </span>
+              <input type="email" name="email" class="form-control" id="email" placeholder="Email address (required)" ng-model="messages.email" required>
+            </div>
+
+            <div class="alert alert-warning" ng-show="messageForm.email.$touched && messageForm.email.$invalid">
+              <h4>Warning!</h4>
+              <p>Please enter a valid email address.</p>
+            </div>
+
+            </div>
+
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="glyphicon glyphicon-envelope"></i>
+                </span>
+              <textarea class="form-control" name="message" rows="5" id="message" placeholder="Write your message here (required)" ng-model="messages.message" required></textarea>
+            </div>
+
+            <div class="alert alert-warning" ng-show="messageForm.message.$touched && messageForm.message.$invalid">
+              <h4>Warning!</h4>
+              <p>Please enter a message to send.</p>
+              </div>
+
+          </div>
+
+            <button type="submit" class="btn btn-primary" id="submit" value="Submit">Submit</button>
+          </form>
+
+        </div>
     </div>
   </div>
 
   <hr/>
 
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <div class="well">
-        <p>Feel free to contact us and ask any questions you have using the form below.
-        We will try to reply within 24 hours.</p>
-
-
-        <form ng-submit="addMessage(messages)">
-          <div class="form-group">
-            <div class="input-group">
-              <span class="input-group-addon">
-                <i class="glyphicon glyphicon-user"></i>
-              </span>
-            <input type="text" class="form-control" id="name" placeholder="Name" ng-model="messages.name">
-          </div>
-          </div>
-          <div class="form-group">
-            <div class="input-group">
-              <span class="input-group-addon">
-                <i class="glyphicon glyphicon-envelope"></i>
-              </span>
-            <textarea class="form-control" rows="5" id="message" placeholder="Write your message here" ng-model="messages.message"></textarea>
-          </div>
-          </div>
-          <button type="submit" class="btn btn-primary" id="submit" value="Submit">Submit</button>
-        </form>
-
-      </div>
-    </div>
-  </div>
-
-
 </div>
+
+<!-- MODAL -->

@@ -78,7 +78,8 @@ myApp.controller('contactController', ['$scope', function($scope) {
 
   $scope.messages = {
     name:"",
-    message:""
+    message:"",
+    email:""
   };
 
   $scope.messagesArray = [];
@@ -89,6 +90,7 @@ myApp.controller('contactController', ['$scope', function($scope) {
        console.log($scope.messagesArray);
        $scope.messages = {}; // empties form after submit
     };
+
 
 }]);
 
