@@ -1,49 +1,41 @@
 var myApp = angular.module('myApp', ['ngMessages', 'ngRoute']);
 
 myApp.config(function ($routeProvider) {
-
   $routeProvider
-
     .when('/', {
         templateUrl: 'pages/main.html',
         controller: 'mainController'
     })
-
     .when('/aboutus', {
         templateUrl: 'pages/aboutus.html',
         controller: 'aboutUsController'
     })
-
     .when('/coaching', {
         templateUrl: 'pages/coaching.html',
         controller: 'coachingController'
     })
-
     .when('/whatson', {
         templateUrl: 'pages/whatson.html',
         controller: 'whatsonController'
     })
-
     .when('/contact', {
         templateUrl: 'pages/contact.html',
         controller: 'contactController'
     })
-
     .when('/join', {
         templateUrl: 'pages/join.html',
         controller: 'joinController'
     })
 });
+
 // SERVICES
 
 myApp.service('priceFinder', function() {
-
   this.lessonType = "Choose...";
-
   this.duration = "Choose...";
-
 });
 
+//DIRECTIVES
 
 //CONTROLLERS
 
@@ -58,6 +50,7 @@ myApp.controller('aboutUsController', ['$scope', function($scope) {
 myApp.controller('coachingController', ['$scope','priceFinder', function($scope, priceFinder) {
 
   $scope.lessonType = priceFinder.lessonType;
+
   $scope.$watch('lessonType', function () {
       priceFinder.lessonType = $scope.lessonType;
     })
@@ -66,6 +59,11 @@ myApp.controller('coachingController', ['$scope','priceFinder', function($scope,
     $scope.$watch('duration', function () {
         priceFinder.duration = $scope.duration;
       })
+
+    $scope.lessonPrice = function() {
+      console.log($scope.lessonType);
+      console.log($scope.duration);
+    };
 
 
 }]);
