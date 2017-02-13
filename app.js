@@ -60,10 +60,20 @@ myApp.controller('coachingController', ['$scope','priceFinder', function($scope,
         priceFinder.duration = $scope.duration;
       })
 
-    $scope.lessonPrice = function() {
+  $scope.priceArray = [
+    ['Individual', '14','12'],
+    ['Shared','14', '12'],
+    ['Childrens'],
+    [],
+    [],
+    []
+  ];
+
+  $scope.lessonPrice = function() {
+
       console.log($scope.lessonType);
       console.log($scope.duration);
-    };
+  };
 
 
 }]);
