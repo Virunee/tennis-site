@@ -96,7 +96,7 @@ nav .navbar {
     float: right;        /* adjust as needed */
     color: white;         /* adjust as needed */
 }
-.panel-heading .collapsed:after {
+.panel-heading .collapse :after {
     /* symbol for "collapsed" panels */
     content:"\e114";    /* adjust as needed, taken from bootstrap.css */
 }
