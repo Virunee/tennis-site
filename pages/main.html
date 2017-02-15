@@ -77,10 +77,27 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
+        <h4 class="modal-title">Join the mailing list</h4>
       </div>
       <div class="modal-body">
-        <p>Some text in the modal.</p>
+        <p>Enter your details to get regular email updates about upcoming events,
+        results, and other news. We promise not to share your details with anyone
+      else.</p>
+
+      <form name='emailForm' ng-submit="addEmail(email)">
+        <div class="form-group">
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-envelope"></i>
+            </span>
+          <input type="email" class="form-control" name="email" id="email" ng-model="email" placeholder="Email address" required>
+        </div>
+        </div>
+        <center><button type="submit" class="btn btn-primary" id="submit" value="Submit"
+          ng-disabled="emailForm.$invalid">Sign me up</button></center>
+          <div class='alert alert-success' ng-show = "emailForm.$submitted">Thanks! We have successfully added you to our mailing list</div>
+      </form>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

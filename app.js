@@ -36,16 +36,23 @@ myApp.service('priceFinder', function() {
 //CONTROLLERS
 
 myApp.controller('mainController', ['$scope', function($scope) {
-   $scope.pageClass = 'page-main';
+   $scope.email = '';
+
+   $scope.mailingList = [];
+
+   $scope.addEmail = function(email){
+         console.log(email);
+        $scope.mailingList.push(email);
+        console.log($scope.mailingList);
+        $scope.email = ''; // empties form after submit
+     };
 }]);
 
 myApp.controller('aboutUsController', ['$scope', function($scope) {
-   $scope.pageClass = 'page-about';
 
 }]);
 
 myApp.controller('coachingController', ['$scope','priceFinder', function($scope, priceFinder) {
-   $scope.pageClass = 'page-coaching';
 
   $scope.lessonType = priceFinder.lessonType;
 
@@ -61,12 +68,10 @@ myApp.controller('coachingController', ['$scope','priceFinder', function($scope,
 }]);
 
 myApp.controller('whatsonController', ['$scope', function($scope) {
-   $scope.pageClass = 'page-whatson';
 
 }]);
 
 myApp.controller('contactController', ['$scope', function($scope) {
-   $scope.pageClass = 'page-contact';
 
   $scope.messages = {
     name:"",
