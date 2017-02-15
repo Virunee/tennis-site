@@ -105,3 +105,30 @@ nav .navbar {
   width: 100%;
   height: 600px;
 }
+
+.ng-enter           { animation: fadeIn 0.5s; }
+
+/* ANIMATIONS
+============================================================================= */
+
+@keyframes fadeIn {
+    0%      { opacity: 0;}
+    100%    { opacity: 1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}

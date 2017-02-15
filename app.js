@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngMessages', 'ngRoute']);
+var myApp = angular.module('myApp', ['ngMessages', 'ngRoute', 'ngAnimate']);
 
 myApp.config(function ($routeProvider) {
   $routeProvider
@@ -22,10 +22,6 @@ myApp.config(function ($routeProvider) {
         templateUrl: 'pages/contact.html',
         controller: 'contactController'
     })
-    .when('/join', {
-        templateUrl: 'pages/join.html',
-        controller: 'joinController'
-    })
 });
 
 // SERVICES
@@ -40,14 +36,16 @@ myApp.service('priceFinder', function() {
 //CONTROLLERS
 
 myApp.controller('mainController', ['$scope', function($scope) {
-
+   $scope.pageClass = 'page-main';
 }]);
 
 myApp.controller('aboutUsController', ['$scope', function($scope) {
+   $scope.pageClass = 'page-about';
 
 }]);
 
 myApp.controller('coachingController', ['$scope','priceFinder', function($scope, priceFinder) {
+   $scope.pageClass = 'page-coaching';
 
   $scope.lessonType = priceFinder.lessonType;
 
@@ -56,17 +54,19 @@ myApp.controller('coachingController', ['$scope','priceFinder', function($scope,
     })
 
     $scope.duration = priceFinder.duration;
-    
+
     $scope.$watch('duration', function () {
         priceFinder.duration = $scope.duration;
       })
 }]);
 
 myApp.controller('whatsonController', ['$scope', function($scope) {
+   $scope.pageClass = 'page-whatson';
 
 }]);
 
 myApp.controller('contactController', ['$scope', function($scope) {
+   $scope.pageClass = 'page-contact';
 
   $scope.messages = {
     name:"",
@@ -83,9 +83,5 @@ myApp.controller('contactController', ['$scope', function($scope) {
        $scope.messages = {}; // empties form after submit
     };
 
-
-}]);
-
-myApp.controller('joinController', ['$scope', function($scope) {
 
 }]);
