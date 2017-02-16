@@ -97,14 +97,14 @@ nav .navbar {
   margin-bottom: 20px;
 }
 
-.panel-heading :after {
+#panel-link :after {
     /* symbol for "opening" panels */
     font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
     content: "\e080";    /* adjust as needed, taken from bootstrap.css */
     float: right;        /* adjust as needed */
     color: white;         /* adjust as needed */
 }
-.panel-heading .collapse :after {
+#panel-link .collapse :after {
     /* symbol for "collapsed" panels */
     content:"\e114";    /* adjust as needed, taken from bootstrap.css */
 }
