@@ -2,3 +2,40 @@
   <h1>What's On</h1>
   <hr/>
 </div>
+
+<div class="container">
+  <!-- PILLS -->
+  <ul class="nav nav-pills">
+    <li class="active" role="button" data-toggle="tab" data-target="#news"><a href="">News</a></li>
+    <li role="button" data-toggle="tab" data-target="#socialevents"><a href="">Social events</a></li>
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="">
+        Fixtures
+      </a>
+      <ul class="dropdown-menu">
+        <li role="button" data-toggle="tab" data-target="#mens"><a href="">Mens</a></li>
+        <li role="button" data-toggle="tab" data-target="#womens"><a href="">Womens</a></li>
+      </ul>
+    </li>
+  </ul>
+
+
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane tab fade active in" id="news">
+      <news-card></news-card>
+    </div>
+    <div role="tabpanel" class="tab-pane tab fade" id="socialevents">
+      <social-events-card></social-events-card>
+    </div>
+    <div role="tabpanel" class="tab-pane tab fade" id="mens">
+      <p>Here are the mens fixtures for 2017:</p>
+      <mens-fixtures></mens-fixtures>
+    </div>
+    <div role="tabpanel" class="tab-pane tab fade" id="womens">
+      <p>Here are the womens fixtures for 2017:</p>
+      <womens-fixtures></womens-fixtures>
+    </div>
+  </div>
+
+
+</div>

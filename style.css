@@ -12,6 +12,10 @@ img {
 
 }
 
+.label {
+  margin-bottom: 10px;
+}
+
 #home-picture {
   margin-top: 40px;
   width: 100%;
@@ -85,8 +89,12 @@ nav .navbar {
   height:auto;
 }
 
-.panel-heading:hover {
+#panel-link:hover {
   background-color: #A04000;
+}
+
+.nav-pills {
+  margin-bottom: 20px;
 }
 
 .panel-heading :after {

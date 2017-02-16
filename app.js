@@ -33,6 +33,43 @@ myApp.service('priceFinder', function() {
 
 //DIRECTIVES
 
+myApp.directive('newsCard', function () {
+  return {
+
+    templateUrl: 'directives/newsCard.html',
+    replace: true,
+  };
+
+});
+
+myApp.directive('socialEventsCard', function () {
+  return {
+
+    templateUrl: 'directives/socialEventsCard.html',
+    replace: true,
+  };
+
+});
+
+myApp.directive('mensFixtures', function () {
+  return {
+
+    templateUrl: 'directives/mensFixtures.html',
+    replace: true,
+  };
+
+});
+
+myApp.directive('womensFixtures', function () {
+  return {
+
+    templateUrl: 'directives/womensFixtures.html',
+    replace: true,
+  };
+
+});
+
+
 //CONTROLLERS
 
 myApp.controller('mainController', ['$scope', function($scope) {
