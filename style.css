@@ -120,6 +120,20 @@ nav .navbar {
 
 .ng-enter           { animation: fadeIn 0.5s; }
 
+ .social-media-logo {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: 10px;
+}
+
+ .social-media-logo:hover + #sm-handle {
+  display: block;
+}
+
+#sm-handle {
+  display: none;
+}
 /* ANIMATIONS
 ============================================================================= */
 
