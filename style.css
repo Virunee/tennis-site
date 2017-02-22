@@ -150,6 +150,14 @@ nav .navbar {
   visibility: visible;
   animation: fadeIn 1s;
 }
+
+#twitter-logo:hover {
+  cursor: pointer;
+}
+
+#fb-logo:hover {
+  cursor: pointer;
+}
 /* ANIMATIONS
 ============================================================================= */
 

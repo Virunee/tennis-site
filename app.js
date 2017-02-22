@@ -8,7 +8,6 @@ myApp.config(function ($routeProvider) {
     })
     .when('/aboutus', {
         templateUrl: 'pages/aboutus.html',
-        controller: 'aboutUsController'
     })
     .when('/coaching', {
         templateUrl: 'pages/coaching.html',
@@ -16,7 +15,6 @@ myApp.config(function ($routeProvider) {
     })
     .when('/whatson', {
         templateUrl: 'pages/whatson.html',
-        controller: 'whatsonController'
     })
     .when('/contact', {
         templateUrl: 'pages/contact.html',
@@ -35,48 +33,37 @@ myApp.service('priceFinder', function() {
 
 myApp.directive('newsCard', function () {
   return {
-
     templateUrl: 'directives/newsCard.html',
     replace: true,
   };
-
 });
 
 myApp.directive('socialEventsCard', function () {
   return {
-
     templateUrl: 'directives/socialEventsCard.html',
     replace: true,
   };
-
 });
 
 myApp.directive('mensFixtures', function () {
   return {
-
     templateUrl: 'directives/mensFixtures.html',
     replace: true,
   };
-
 });
 
 myApp.directive('womensFixtures', function () {
   return {
-
     templateUrl: 'directives/womensFixtures.html',
     replace: true,
   };
-
 });
-
 
 //CONTROLLERS
 
 myApp.controller('mainController', ['$scope', function($scope) {
    $scope.email = '';
-
    $scope.mailingList = [];
-
    $scope.addEmail = function(email){
          console.log(email);
         $scope.mailingList.push(email);
@@ -85,46 +72,56 @@ myApp.controller('mainController', ['$scope', function($scope) {
      };
 }]);
 
-myApp.controller('aboutUsController', ['$scope', function($scope) {
-
-}]);
-
 myApp.controller('coachingController', ['$scope','priceFinder', function($scope, priceFinder) {
 
   $scope.lessonType = priceFinder.lessonType;
 
   $scope.$watch('lessonType', function () {
       priceFinder.lessonType = $scope.lessonType;
+      $scope.finalNonMemberPrice = $scope.duration*$scope.lessonType;
+      $scope.finalMemberPrice = $scope.duration*($scope.lessonType-2);
     })
 
     $scope.duration = priceFinder.duration;
 
     $scope.$watch('duration', function () {
         priceFinder.duration = $scope.duration;
+        $scope.finalNonMemberPrice = $scope.duration*$scope.lessonType;
+        $scope.finalMemberPrice = $scope.duration*($scope.lessonType-2);
       })
 
-}]);
+      $scope.priceShowMembers = function () {
+        if(isNaN($scope.duration)) {
+          return "0";
+        } else {
+            return $scope.finalMemberPrice;
+          }
+      };
 
-myApp.controller('whatsonController', ['$scope', function($scope) {
-
+      $scope.priceShowNonMembers = function () {
+        if(isNaN($scope.duration)) {
+          return "0";
+        } else {
+            return $scope.finalNonMemberPrice;
+          }
+      };
 }]);
 
 myApp.controller('contactController', ['$scope', function($scope) {
+  $scope.openLink = function(url) {
+    window.open(url);
+  };
 
   $scope.messages = {
     name:"",
     message:"",
     email:""
   };
-
   $scope.messagesArray = [];
-
   $scope.addMessage = function(messages){
         console.log(messages);
        $scope.messagesArray.push(messages);
        console.log($scope.messagesArray);
        $scope.messages = {}; // empties form after submit
     };
-
-
 }]);
