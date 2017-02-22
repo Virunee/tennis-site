@@ -102,7 +102,7 @@ myApp.controller('coachingController', ['$scope','priceFinder', function($scope,
     $scope.$watch('duration', function () {
         priceFinder.duration = $scope.duration;
       })
-      
+
 }]);
 
 myApp.controller('whatsonController', ['$scope', function($scope) {
