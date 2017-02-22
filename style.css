@@ -89,24 +89,20 @@ nav .navbar {
   height:auto;
 }
 
+.glyphicon.glyphicon-chevron-down {
+  float:right;
+}
+
 #panel-link:hover {
   background-color: #A04000;
 }
 
-.nav-pills {
-  margin-bottom: 20px;
+#panel-link.collapsed span {
+  transform: rotate(-90deg);
 }
 
-#panel-link :after {
-    /* symbol for "opening" panels */
-    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
-    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
-    float: right;        /* adjust as needed */
-    color: white;         /* adjust as needed */
-}
-#panel-link .collapse :after {
-    /* symbol for "collapsed" panels */
-    content:"\e114";    /* adjust as needed, taken from bootstrap.css */
+.nav-pills {
+  margin-bottom: 20px;
 }
 
 #map {
@@ -127,12 +123,32 @@ nav .navbar {
   margin: 10px;
 }
 
- .social-media-logo:hover + #sm-handle {
-  display: block;
+#twitter-logo {
+  display: inline-block;
 }
 
-#sm-handle {
-  display: none;
+#twitter-handle {
+  display: inline-block;
+  visibility: hidden;
+}
+
+#fb-handle {
+  display: inline-block;
+    visibility: hidden;
+}
+
+#fb-logo {
+    display: inline-block;
+}
+
+#twitter-logo:hover + #twitter-handle {
+  visibility: visible;
+  animation: fadeIn 1s;
+}
+
+#fb-logo:hover +  #fb-handle {
+  visibility: visible;
+  animation: fadeIn 1s;
 }
 /* ANIMATIONS
 ============================================================================= */

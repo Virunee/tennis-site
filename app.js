@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngMessages', 'ngRoute', 'ngAnimate']);
+var myApp = angular.module('myApp', ['ngMessages', 'ngRoute', 'ngAnimate', 'ngSanitize']);
 
 myApp.config(function ($routeProvider) {
   $routeProvider
@@ -102,6 +102,7 @@ myApp.controller('coachingController', ['$scope','priceFinder', function($scope,
     $scope.$watch('duration', function () {
         priceFinder.duration = $scope.duration;
       })
+      
 }]);
 
 myApp.controller('whatsonController', ['$scope', function($scope) {
