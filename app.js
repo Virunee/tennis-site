@@ -77,7 +77,7 @@ myApp.controller('coachingController', ['$scope','priceFinder', function($scope,
   $scope.lessonType = priceFinder.lessonType;
 
   $scope.$watch('lessonType', function () {
-      priceFinder.lessonType = $scope.lessonType;
+
       $scope.finalNonMemberPrice = $scope.duration*$scope.lessonType;
       $scope.finalMemberPrice = $scope.duration*($scope.lessonType-2);
     })
@@ -85,7 +85,7 @@ myApp.controller('coachingController', ['$scope','priceFinder', function($scope,
     $scope.duration = priceFinder.duration;
 
     $scope.$watch('duration', function () {
-        priceFinder.duration = $scope.duration;
+        
         $scope.finalNonMemberPrice = $scope.duration*$scope.lessonType;
         $scope.finalMemberPrice = $scope.duration*($scope.lessonType-2);
       })
